@@ -1,0 +1,120 @@
+PROJECT: Automate-PluralSight
+StartDate: 27-12-2018
+Creator: SRvSaha
+Desc: These are subtasks which 
+can be done for betterment of
+the project
+NOTE: Automation of PluralSight
+is illegal. Also, it will ban the account
+if unusual traffic is found from an account.
+Find a workaround to this thing
+============================================
+Subtask 1 (Easy): BASIC STRUCTURING
+
+As of now, we are passing the directory name directly to the program.
+
+In this case we need to create the folders manually where to save the files.
+
+Ideally, it should be done in this way:
+
+- Fix a base parent directory for the downloads. Like ("E:\IDM") or something. Later on make it in such a way
+that it is configurable so that we can keep this parent directory as the name of the Track(Certification Course) 
+example: CISCO CCNA Data Centre(See Subtask 5)
+- Check if there is any existing folder with the name of the course title
+- If it exists, add the downloads there, else create a new directory as a child of the parent dir
+- While downloading check if there exists the subdirectory with the module name inside the course dir
+- If yes, add in that for the videos those are in the same module
+-- If not, create a folder (generally the case of new module) and then add it's videos there
+
+Subtask 2 (Moderate): COMMAND LINE BASED SOFTWARE
+Use ArgParse to pass the arguments rather than passing using sys.argv
+
+Write proper help statements, verbose statement for files to be passed and if possible mention
+examples
+
+Subtask 3 (Tough): SCHEDULER KIND OF THING WHICH WILL ACT LIKE ALWAYS LISTENING SERVER
+Auto Start the Python Script whenever any new .json file comes in. This will help us in a way 
+that we don't have to manually start the python script and thereby it'll be the case of Auto
+downloading
+
+
+If possible, try to find a fix for that.
+
+Subtask 4 (R&D): ADVANCED DIRECTORY STRUCTURE REVAMPTION
+
+Write a jQuery function which does this thing:
+
+It will go to the track page like: 
+Cisco CCNP Routing and Switching
+Then
+It will find out all the sections and subsections.
+
+It will output a mapping kind of a file, where we have the mapping like this:
+
+ROUTE (300-101) has 10 courses in it with the names of these 10 courses.
+
+Similarly, it will do for all the available ones.
+
+In this was we will have a file mapping which will give us the mapping hierarchy
+and in this way we can create our local directory structure.
+As a part of Subtask (1) we are already creating directory by the name of course and the subdirectory
+based on module. This is will an extension of it where we will have this kind of directory structure:
+
+CERTIFICATION_NAME or the main name like: Cisco CCNP Routing and Switching
+SECTION_NAMES or the name of the subparts of the Certification. These can be some exam names or some 
+other names based on logical segregation.
+COURSE_NAME will be the name of each course inside that CERTIFICATION_NAME. These will lie under
+respective SECTION_NAMES
+MODULE_NAME will be the name each of the modules which will be under COURSE_NAME
+VIDEO_NAME will be the name of the video which will be under their respective MODULE_NAME. 
+
+Pictorically:
+
+CERTIFICATION_NAME
+|---
+    |---SECTION_NAMES_1
+        |---COURSE_NAME_1
+            |---MODULE_NAME_1
+                |---VIDEO_NAME_1
+                |---VIDEO_NAME_2
+                .
+                .
+                |---VIDEO_NAME_N
+            |---MODULE_NAME_2
+                |---VIDEO_NAME_1
+                |---VIDEO_NAME_2
+                .
+                .
+                |---VIDEO_NAME_N
+            .
+            .
+            |---MODULE_NAME_N
+        |---COURSE_NAME_2
+            |---MODULE_NAME_1
+                |---VIDEO_NAME_1
+                |---VIDEO_NAME_2
+                .
+                .
+                |---VIDEO_NAME_N
+        .
+        .
+        |---COURSE_NAME_N
+    |---SECTION_NAMES_2
+        |---COURSE_NAME_1
+        |---COURSE_NAME_2
+            |---MODULE_NAME_1
+                |---VIDEO_NAME_1
+                |---VIDEO_NAME_2
+                .
+                .
+                |---VIDEO_NAME_N
+        .
+        .
+        |---COURSE_NAME_N
+    .
+    .
+    |---SECTION_NAMES_N
+
+Subtask 5 (R&D): WEBSITE AUTOMATION
+Figure out some way to automate the way the jQuery is run in the console which itself is a bit time
+consuming considering the copy-paste we have to do.
