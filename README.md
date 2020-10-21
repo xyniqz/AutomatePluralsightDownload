@@ -2,7 +2,9 @@
 ### Automate the Download of Pluralsight Videos for future reference. 
 
 The Project is created to automate the process of Downloading of Pluralsight Clips which are a part if the course using IDM in Windows.
+
 Also, another use case was after the files are downloaded, in case those get deleted, then there should be some way to recover it.
+
 For the recovery part, we are making using of Recuva and doing some post processing so that we can get all the files back with proper renaming and moving in proper folders
 as it were when downloaded.
 
