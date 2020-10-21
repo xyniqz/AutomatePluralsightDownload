@@ -15,18 +15,18 @@ so that the downloaded files doesn't get removed after the subscription in mind.
 
 Flow of the Process:
 
-Step 1. Use the core.js to grab all the links for the clips in the course
-Step 2. Use download.py for pre-processing of the links grabbed from Step 1 to be used by IDM for downloading
-Step 3. Run the sameSectionVideoDownlod.bat script for triggering of IDM for the links which were found in Step 2 after post-processing
+- Step 1. Use the core.js to grab all the links for the clips in the course
+- Step 2. Use download.py for pre-processing of the links grabbed from Step 1 to be used by IDM for downloading
+- Step 3. Run the sameSectionVideoDownlod.bat script for triggering of IDM for the links which were found in Step 2 after post-processing
 
 * To Recover Files:
 
 Flow of the Process:
 
-Step 1. Use Recuva and scan for all deleted files/folder. In case the memory is not overwritten, files will get recovered. Recuva give a text file of all the possible recovery.
-Step 2. Recover the files using Recuva
-Step 3. Preprocess the txt file of Recuva using GenerateMappingRecuva.py file
-Step 4. Post process the files using the PluralsightFilesRecover.py for proper renaming, arranging and moving to folder.
+- Step 1. Use Recuva and scan for all deleted files/folder. In case the memory is not overwritten, files will get recovered. Recuva give a text file of all the possible recovery.
+- Step 2. Recover the files using Recuva
+- Step 3. Preprocess the txt file of Recuva using GenerateMappingRecuva.py file
+- Step 4. Post process the files using the PluralsightFilesRecover.py for proper renaming, arranging and moving to folder.
 
 Bingo! You should now have to files downloaded. Please modify the path of Downloads and other constants in the Source Code before using.
 
